@@ -1,0 +1,9 @@
+#!/bin/bash
+maim -us screenshot.png
+
+UUID=$(uuidgen)
+UUID="${UUID[@]:0:5}"
+
+scp screenshot.png "frans@tankernn.eu:/var/www/scr/$UUID.png"
+
+echo "http://scr.tankernn.eu/$UUID.png" | xsel --clipboard
