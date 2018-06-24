@@ -99,3 +99,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 MAKEFLAGS="-j$(nproc)"
+
+bindkey -v
