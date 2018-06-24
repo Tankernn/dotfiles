@@ -14,7 +14,7 @@ gaps inner 20
 gaps outer 20
 smart_gaps true
 for_window [class="st"] border pixel 3
-client.focused #8a0101 #8a0101 #ffffff #750401 #8a0101
+client.focused #0087AF #0087AF #ffffff #750401 #0087AF
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 4%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 4%- unmute
