@@ -28,6 +28,8 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 bindsym Mod1+Ctrl+l exec "~/.scripts/lock.sh && echo mem | sudo /usr/bin/tee /sys/power/state"
 # Type password
 bindsym Mod1+p exec passmenu --type -i 
+# Open URL in PRIMARY selection
+bindsym Mod1+o exec xdg-open $(xsel -po)
 
 # Take a screenshot
 bindsym Print exec --no-startup-id "~/.scripts/screenshot.sh"
