@@ -104,4 +104,4 @@ bindkey -v
 bindkey '^r' history-incremental-search-backward
 
 powerline-daemon -q
-. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/share/powerline/bindings/zsh/powerline.zsh
