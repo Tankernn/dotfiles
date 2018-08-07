@@ -16,3 +16,10 @@ nnoremap <leader>f :tabfind ./**/
 nnoremap Y y$
 nnoremap H ^
 nnoremap L $
+
+inoremap jk <esc>
+inoremap <esc> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
