@@ -23,3 +23,7 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
+
+iabbrev ret return
+iabbrev @@ frans@tankernn.eu
+iabbrev ssig -- <cr>Frans Bergman<cr>frans@tankernn.eu
