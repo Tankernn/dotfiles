@@ -1,2 +1,2 @@
 #!/bin/bash
-feh --bg-scale ~/desktop_background.png
+feh --bg-fill ~/desktop_background.png
