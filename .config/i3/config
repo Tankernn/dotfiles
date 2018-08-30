@@ -160,8 +160,6 @@ exec --no-startup-id compton
 exec_always --no-startup-id ~/.scripts/set_background.sh
 exec --no-startup-id pulseeffects --gapplication-service
 exec discord-canary
-exec ckb-next
-# exec owncloud
 exec redshift-gtk
 # xset to disable screen blanking
 exec --no-startup-id xset s noblank s noexpose r rate 340 25 -dpms &
