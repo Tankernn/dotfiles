@@ -98,7 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-MAKEFLAGS="-j$(nproc)"
+export MAKEFLAGS="-j$(nproc)"
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
