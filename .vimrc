@@ -13,6 +13,12 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <leader>f :tabfind ./**/
 
+" Local (scope) replace
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+
+" Global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
+
 nnoremap Y y$
 nnoremap H ^
 nnoremap L $
