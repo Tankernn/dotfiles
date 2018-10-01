@@ -20,9 +20,9 @@ client.focused #0087AF #0087AF #ffffff #750401 #0087AF
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 4%+ unmute
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 4%- unmute
 bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
-bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext exec --no-startup-id playerctl next
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause || mpc toggle
+bindsym XF86AudioNext exec --no-startup-id playerctl next || mpc next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous || mpc prev
 
 # Lock
 bindsym Mod1+Ctrl+l exec "~/.scripts/lock.sh && echo mem | sudo /usr/bin/tee /sys/power/state"
