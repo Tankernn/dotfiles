@@ -1,9 +1,11 @@
 syntax on
 set wildmenu
+set autoindent
 
 set number relativenumber
 
-set tabstop=4
+set tabstop=4 shiftwidth=4
+set expandtab
 
 let mapleader = ","
 let maplocalleader = "\\"
