@@ -99,6 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export MAKEFLAGS="-j$(nproc)"
+export EDITOR="vim"
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
