@@ -1,5 +1,6 @@
 " ########## General ########## {{{
 syntax on
+colorscheme peachpuff
 set wildmenu
 set autoindent
 
