@@ -32,6 +32,9 @@ nnoremap Y y$
 nnoremap H ^
 nnoremap L $
 
+vnoremap H ^
+vnoremap L $
+
 inoremap jk <esc>
 inoremap <esc> <nop>
 inoremap <Left> <nop>
