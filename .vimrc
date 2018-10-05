@@ -10,6 +10,13 @@ set expandtab
 let mapleader = ","
 let maplocalleader = "\\"
 
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+augroup trailingwhitespace
+    autocmd!
+    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+augroup END
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
