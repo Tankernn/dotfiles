@@ -5,6 +5,7 @@ set wildmenu
 set autoindent
 
 set number relativenumber
+set so=7
 
 set tabstop=4 shiftwidth=4
 set expandtab
