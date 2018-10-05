@@ -1,6 +1,7 @@
 " ########## General ########## {{{
 syntax on
 colorscheme peachpuff
+let g:airline_theme='angr'
 set wildmenu
 set autoindent
 
@@ -66,6 +67,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mkitt/tabline.vim'
 Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
