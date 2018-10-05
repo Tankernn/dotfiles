@@ -1,3 +1,4 @@
+" ########## General ########## {{{
 syntax on
 set wildmenu
 set autoindent
@@ -9,14 +10,18 @@ set expandtab
 
 let mapleader = ","
 let maplocalleader = "\\"
+" }}}
 
+" ########## Highlighting ########## {{{
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 augroup trailingwhitespace
     autocmd!
     autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 augroup END
+" }}}
 
+" ########## Keybinds ########## {{{
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
@@ -41,9 +46,15 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
+" }}}
 
+" ########## Abbreviations ########## {{{
 iabbrev ret return
 iabbrev @@ frans@tankernn.eu
 iabbrev ssig -- <cr>Frans Bergman<cr>frans@tankernn.eu
+" }}}
 
+" ########## File-specific settings ########## {{{
 autocmd FileType gitcommit :set spell
+autocmd FileType vim :set foldmethod=marker
+" }}}
