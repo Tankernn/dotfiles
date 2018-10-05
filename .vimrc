@@ -60,3 +60,17 @@ iabbrev ssig -- <cr>Frans Bergman<cr>frans@tankernn.eu
 autocmd FileType gitcommit :set spell
 autocmd FileType vim :set foldmethod=marker
 " }}}
+
+" ########## Plugins ########## {{{
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'mkitt/tabline.vim'
+Plugin 'valloric/youcompleteme'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'raimondi/delimitmate'
+call vundle#end()
+filetype plugin indent on    " required
+" }}}
