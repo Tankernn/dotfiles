@@ -153,11 +153,12 @@ bindsym Mod1+u       resize grow height 10 px or 10 ppt
 bindsym Mod1+i       resize shrink height 10 px or 10 ppt
 bindsym Mod1+o       resize grow width 10 px or 10 ppt
 
+exec --no-startup-id wal -Rn
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 exec --no-startup-id setxkbmap -layout se
 exec --no-startup-id compton
-exec_always --no-startup-id ~/.scripts/set_background.sh
+exec_always --no-startup-id ~/.fehbg
 exec --no-startup-id pulseeffects --gapplication-service
 exec discord-canary
 exec redshift-gtk
