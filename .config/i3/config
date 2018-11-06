@@ -83,6 +83,10 @@ bindsym Mod1+Shift+Down move down
 bindsym Mod1+Shift+Up move up
 bindsym Mod1+Shift+Right move right
 
+# Add ___GAPS___
+bindsym Mod1+g       gaps inner all plus 10
+bindsym Mod1+Shift+g gaps inner all minus 10
+
 # split in horizontal orientation
 bindsym Mod1+c split h
 
