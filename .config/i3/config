@@ -11,10 +11,9 @@
 
 new_window none
 gaps inner 20
-gaps outer -20
 smart_gaps true
 smart_borders true
-default_border pixel 3
+default_border none
 client.focused #0087AF #0087AF #ffffff #750401 #0087AF
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 4%+ unmute
