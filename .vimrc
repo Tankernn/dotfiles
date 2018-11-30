@@ -49,6 +49,18 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
+
+" Dragvisuals keybinds
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+
+" Remove any introduced trailing whitespace after moving...
+let g:DVB_TrimWS = 1
+
+
 " }}}
 
 " ########## Abbreviations ########## {{{
@@ -74,6 +86,7 @@ Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
+Plugin 'fisadev/dragvisuals.vim'
 call vundle#end()
 filetype plugin indent on    " required
 " }}}
