@@ -9,6 +9,8 @@
 # layout, use the i3-config-wizard
 #
 
+set $get_default_sink $(pactl info | awk -F: '/Default Sink/ { print $2 }')
+
 new_window none
 gaps inner 20
 gaps outer -20
@@ -17,9 +19,9 @@ smart_borders true
 default_border pixel 3
 client.focused #0087AF #0087AF #ffffff #750401 #0087AF
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -q set Master 4%+ unmute
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -q set Master 4%- unmute
-bindsym XF86AudioMute exec --no-startup-id amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume $get_default_sink +4%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume $get_default_sink -4%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute $get_default_sink toggle
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause || mpc toggle
 bindsym XF86AudioNext exec --no-startup-id playerctl next || mpc next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous || mpc prev
