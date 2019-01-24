@@ -30,8 +30,6 @@ bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause || mpc toggle
 bindsym XF86AudioNext exec --no-startup-id playerctl next || mpc next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous || mpc prev
 
-# Lock
-bindsym Mod1+Ctrl+l exec "~/.scripts/lock.sh && echo mem | sudo /usr/bin/tee /sys/power/state"
 # Type password
 bindsym Mod1+p exec passmenu --type -i
 # Open URL in PRIMARY selection
@@ -154,8 +152,8 @@ bindsym Mod1+Shift+0 move container to workspace 10
 bindsym Mod1+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym Mod1+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym Mod1+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# open exit menu
+bindsym Mod1+Shift+e exec ~/.scripts/exit_menu.sh
 
 # resize window (you can also use the mouse for that)
 bindsym Mod1+y       resize shrink width 10 px or 10 ppt
