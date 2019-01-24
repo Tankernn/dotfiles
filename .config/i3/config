@@ -33,7 +33,7 @@ bindsym XF86AudioPrev exec --no-startup-id playerctl previous || mpc prev
 # Lock
 bindsym Mod1+Ctrl+l exec "~/.scripts/lock.sh && echo mem | sudo /usr/bin/tee /sys/power/state"
 # Type password
-bindsym Mod1+p exec passmenu --type -i 
+bindsym Mod1+p exec passmenu --type -i
 # Open URL in PRIMARY selection
 bindsym Mod1+Shift+o exec xdg-open $(xsel -po)
 
