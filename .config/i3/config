@@ -60,8 +60,8 @@ bindsym Mod1+Return exec --no-startup-id st
 bindsym Mod1+q kill
 bindsym Mod1+Shift+q kill
 
-# start rofi (a program launcher)
-bindsym Mod1+d exec --no-startup-id rofi -show run
+# start dmenu (a program launcher)
+bindsym Mod1+d exec --no-startup-id dmenu_run -b
 
 # change focus
 bindsym Mod1+$left focus left
