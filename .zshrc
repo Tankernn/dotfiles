@@ -102,6 +102,7 @@ alias ccat="highlight --out-format=ansi"
 
 export MAKEFLAGS="-j$(nproc)"
 export EDITOR="vim"
+LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
