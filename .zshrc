@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="michelebologna"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -105,6 +105,3 @@ export EDITOR="vim"
 
 bindkey -v
 bindkey '^r' history-incremental-search-backward
-
-powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
