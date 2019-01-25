@@ -4,6 +4,10 @@ colorscheme peachpuff
 let g:airline_theme='angr'
 set wildmenu
 set autoindent
+set smartindent
+set incsearch
+set smarttab
+set smartcase
 
 set number relativenumber
 set so=7
