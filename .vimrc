@@ -1,7 +1,7 @@
 " ########## General ########## {{{
 syntax on
 colorscheme peachpuff
-let g:airline_theme='angr'
+let g:airline_theme='atomic'
 set wildmenu
 set autoindent
 set smartindent
@@ -23,8 +23,8 @@ let maplocalleader = "\\"
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 augroup trailingwhitespace
-    autocmd!
-    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd!
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 augroup END
 " }}}
 
@@ -53,6 +53,18 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 inoremap <Up> <nop>
 inoremap <Down> <nop>
+
+" Dragvisuals keybinds
+vmap  <expr>  <LEFT>   DVB_Drag('left')
+vmap  <expr>  <RIGHT>  DVB_Drag('right')
+vmap  <expr>  <DOWN>   DVB_Drag('down')
+vmap  <expr>  <UP>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+
+" Remove any introduced trailing whitespace after moving...
+let g:DVB_TrimWS = 1
+
+
 " }}}
 
 " ########## Abbreviations ########## {{{
@@ -80,6 +92,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'neomake/neomake'
+Plugin 'fisadev/dragvisuals.vim'
 call vundle#end()
 filetype plugin indent on    " required
 " }}}
