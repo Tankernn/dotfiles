@@ -13,10 +13,9 @@ set $get_default_sink $(pactl info | awk -F: '/Default Sink/ { print $2 }')
 
 new_window none
 gaps inner 20
-gaps outer -20
 smart_gaps true
 smart_borders true
-default_border pixel 3
+default_border none
 client.focused #0087AF #0087AF #ffffff #750401 #0087AF
 
 for_window [class="discord"] move to workspace 3
