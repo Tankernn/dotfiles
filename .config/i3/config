@@ -11,6 +11,19 @@
 
 set $get_default_sink $(pactl info | awk -F: '/Default Sink/ { print $2 }')
 
+bar {
+    status_command i3status
+
+    font pango:Hack 12
+    tray_padding 0
+
+    mode hide
+    hidden_state hide
+    modifier Mod1
+
+    position top
+}
+
 new_window none
 gaps inner 20
 smart_gaps true
