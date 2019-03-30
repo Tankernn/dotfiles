@@ -105,4 +105,14 @@ export EDITOR="vim"
 LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
 
 bindkey -v
-bindkey '^r' history-incremental-search-backward
+
+# Fuzzy Finder
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
+
+fzf-history-widget-accept() {
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N     fzf-history-widget-accept
+bindkey '^X^R' fzf-history-widget-accept
