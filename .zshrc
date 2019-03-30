@@ -116,3 +116,7 @@ fzf-history-widget-accept() {
 }
 zle     -N     fzf-history-widget-accept
 bindkey '^X^R' fzf-history-widget-accept
+
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
