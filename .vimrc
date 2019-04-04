@@ -34,6 +34,10 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <leader>f :tabfind ./**/
 
+nnoremap <leader>gs :Gstatus<cr>
+nnoremap <leader>gc :Gcommit<cr>
+nnoremap <leader>gr :Git rebase -i
+
 " Local (scope) replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
