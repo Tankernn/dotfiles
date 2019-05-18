@@ -1,0 +1,6 @@
+alias ccat="highlight --out-format=ansi"
+alias ytdl="youtube-dl"
+alias r="ranger"
+alias v="vim"
+alias m="mutt"
+alias h="htop"

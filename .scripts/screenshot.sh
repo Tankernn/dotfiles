@@ -1,8 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 maim -us screenshot.png
 
 UUID=$(uuidgen)
-UUID="${UUID[@]:0:5}"
+UUID="${UUID[*]:0:5}"
 
 scp screenshot.png "frans@tankernn.eu:/srv/www/scr/$UUID.png"
 

@@ -98,11 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ccat="highlight --out-format=ansi"
-
-export MAKEFLAGS="-j$(nproc)"
-export EDITOR="vim"
-LESSOPEN="|lesspipe.sh %s"; export LESSOPEN
+source ~/.aliases
 
 bindkey -v
 
