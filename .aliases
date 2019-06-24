@@ -4,3 +4,8 @@ alias r="ranger"
 alias v="vim"
 alias m="mutt"
 alias h="htop"
+
+alias xi="sudo xbps-install"
+alias xu="xi -Suy"
+alias xr="sudo xbps-remove -R"
+alias xq="xbps-query -Rs"
