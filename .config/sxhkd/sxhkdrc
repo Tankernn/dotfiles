@@ -1,0 +1,31 @@
+# Reload functions
+alt + Escape
+    "$XDG_CONFIG_HOME"/sxhkd/functions
+
+alt + shift + p
+    passmenu --type -i
+
+Print
+    ~/.scripts/screenshot.sh
+
+alt + shift + e
+    ~/.scripts/exit_menu.sh
+
+# Launch programs
+alt + shift + s
+    spotify
+
+# Media controls
+XF86AudioRaiseVolume
+    amixer sset Master 4%+
+XF86AudioLowerVolume
+    amixer sset Master 4%-
+XF86AudioMute
+    amixer sset Master toggle
+
+XF86AudioPlay
+    playerctl play-pause || mpc toggle
+XF86AudioNext
+    playerctl next || mpc next
+XF86AudioPrev
+    playerctl previous || mpc prev
