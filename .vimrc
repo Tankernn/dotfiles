@@ -90,13 +90,12 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mkitt/tabline.vim'
-Plugin 'valloric/youcompleteme'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'raimondi/delimitmate'
-Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'neomake/neomake'
 Plugin 'fisadev/dragvisuals.vim'
+Plugin 'maralla/completor.vim'
 call vundle#end()
 filetype plugin indent on    " required
 " }}}
