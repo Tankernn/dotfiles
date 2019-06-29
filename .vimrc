@@ -38,6 +38,9 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gr :Git rebase -i
 
+noremap <leader>c :w! \| !compiler <c-r>%<CR>
+noremap <leader>p :!opout <c-r>%<CR><CR>
+
 " Local (scope) replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
@@ -78,8 +81,9 @@ iabbrev ssig -- <cr>Frans Bergman<cr>frans@tankernn.eu
 " }}}
 
 " ########## File-specific settings ########## {{{
-autocmd FileType gitcommit :set spell
+autocmd FileType gitcommit,groff :set spell
 autocmd FileType vim :set foldmethod=marker
+autocmd BufNewFile,BufRead *.ms,*.me,*.mom,*.man set filetype=groff
 " }}}
 
 " ########## Plugins ########## {{{
