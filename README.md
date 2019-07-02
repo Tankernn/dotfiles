@@ -1,3 +1,9 @@
 # dotfiles
 
-Configuration files and scripts for my i3-gaps rice.
+Configuration files and scripts for my dwm rice.
+
+## Installation
+
+```
+./install.sh
+```
