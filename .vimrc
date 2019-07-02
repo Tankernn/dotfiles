@@ -109,5 +109,4 @@ filetype plugin indent on    " required
 " ########## Plugin Settings ########## {{{
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 call neomake#configure#automake('nrwi', 500)
-let g:neomake_open_list = 2
 " }}}
