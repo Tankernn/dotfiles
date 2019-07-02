@@ -20,7 +20,7 @@ case $CHOICE in
         i3-msg exit
         ;;
     "Shutdown")
-        shutdown -h now
+        sudo shutdown -h now
         ;;
     "Reboot")
         reboot
