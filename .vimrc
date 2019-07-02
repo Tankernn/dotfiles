@@ -7,6 +7,7 @@ set autoindent
 set smartindent
 set incsearch
 set smarttab
+set ignorecase
 set smartcase
 
 set number relativenumber
