@@ -32,7 +32,7 @@ augroup END
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
-nnoremap <leader>f :tabfind ./**/
+nnoremap <leader>f :FZF<cr>
 
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
@@ -100,6 +100,7 @@ Plugin 'raimondi/delimitmate'
 Plugin 'neomake/neomake'
 Plugin 'fisadev/dragvisuals.vim'
 Plugin 'maralla/completor.vim'
+Plugin 'junegunn/fzf'
 call vundle#end()
 filetype plugin indent on    " required
 " }}}
