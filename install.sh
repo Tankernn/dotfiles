@@ -14,6 +14,10 @@ do
     ln -s $(realpath $f) ~/
 done
 
+fancy_print "Installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 fancy_print "Sourcing .profile and .aliases"
 . ./.profile
 . ./.aliases
