@@ -88,22 +88,20 @@ autocmd BufNewFile,BufRead *.ms,*.me,*.mom,*.man set filetype=groff
 " }}}
 
 " ########## Plugins ########## {{{
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'mkitt/tabline.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'raimondi/delimitmate'
-Plugin 'neomake/neomake'
-Plugin 'fisadev/dragvisuals.vim'
-Plugin 'maralla/completor.vim'
-Plugin 'junegunn/fzf'
-call vundle#end()
-filetype plugin indent on    " required
+call plug#begin()
+Plug 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'mkitt/tabline.vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'raimondi/delimitmate'
+Plug 'neomake/neomake'
+Plug 'fisadev/dragvisuals.vim'
+Plug 'maralla/completor.vim'
+Plug 'junegunn/fzf'
+call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
