@@ -15,6 +15,9 @@ alt + shift + e
 alt + shift + s
     spotify
 
+alt + shift + f
+    firefox
+
 # Media controls
 XF86AudioRaiseVolume
     amixer sset Master 4%+
