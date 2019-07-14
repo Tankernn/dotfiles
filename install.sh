@@ -5,11 +5,13 @@ fancy_print() {
 }
 
 fancy_print "Linking dotfiles"
-for f in ".*"
+for f in .*
 do
     case "$f" in
-        *.git*) continue ;;
-        *.swp)  continue ;;
+        .) continue ;;
+        ..) continue ;;
+        .git) continue ;;
+        *.swp) continue ;;
     esac
     ln -s $(realpath $f) ~/
 done
@@ -41,7 +43,7 @@ done
 git_make_install()
 {
     (
-    mkdir -p "~/git$1";
+    mkdir -p "~/git/$1";
     cd "~/git/$1";
     git clone "$2" .;
     make;
