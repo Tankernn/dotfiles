@@ -29,6 +29,10 @@ augroup trailingwhitespace
 autocmd!
 autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 augroup END
+
+" Tabs
+set list
+set listchars=tab:\|\ 
 " }}}
 
 " ########## Keybinds ########## {{{
