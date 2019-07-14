@@ -2,6 +2,8 @@
 syntax on
 colorscheme peachpuff
 let g:airline_theme='atomic'
+set encoding=utf-8
+set fileencoding=utf-8
 set wildmenu
 set autoindent
 set smartindent
