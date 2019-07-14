@@ -14,10 +14,6 @@ do
     ln -s $(realpath $f) ~/
 done
 
-fancy_print "Installing vim-plug"
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 fancy_print "Installing packages"
 sudo xbps-install -Suy $(cat packages.txt)
 
@@ -52,6 +48,10 @@ git_make_install()
     sudo make install;
     )
 }
+
+fancy_print "Installing vim-plug"
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 fancy_print "Installing suckless forks"
 git_make_install "st" "https://gogs.tankernn.eu/Tankernn/st.git"
