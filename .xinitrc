@@ -9,4 +9,6 @@ xset -dpms
 
 [ -f ~/.Xresources ] && xrdb -merge -I"$HOME" ~/.Xresources
 
-exec ck-launch-session dbus-launch --sh-syntax --exit-with-session dwm
+start-pulseaudio-x11 &
+
+exec dwm
