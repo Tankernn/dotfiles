@@ -24,6 +24,7 @@ rofi
 surf
 sxhkd
 tabbed
+uim-anthy
 vim-huge
 xorg
 zsh
