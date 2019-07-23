@@ -18,4 +18,9 @@ if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
     echo "D-Bus per-session daemon address is: $DBUS_SESSION_BUS_ADDRESS"
 fi
 
+export GTK_IM_MODULE='uim'
+export QT_IM_MODULE='uim'
+uim-xim &
+export XMODIFIERS='@im=uim'
+
 exec dwm
