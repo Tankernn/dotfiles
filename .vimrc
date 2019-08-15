@@ -1,6 +1,6 @@
 " ########## General ########## {{{
 syntax on
-colorscheme peachpuff
+colorscheme elflord
 let g:airline_theme='atomic'
 set encoding=utf-8
 set fileencoding=utf-8
