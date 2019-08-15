@@ -8,6 +8,7 @@ set wildmenu
 set autoindent
 set smartindent
 set incsearch
+set hlsearch
 set smarttab
 set ignorecase
 set smartcase
@@ -47,6 +48,8 @@ nnoremap <leader>gr :Git rebase -i
 
 noremap <leader>c :w! \| !compiler <c-r>%<CR>
 noremap <leader>p :!opout <c-r>%<CR><CR>
+
+nnoremap <esc> :set nohlsearch<CR>
 
 " Local (scope) replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
