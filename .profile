@@ -4,7 +4,8 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export PATH="$PATH:$HOME/.cargo/bin:$HOME/.scripts:$HOME/bin"
+export GOPATH="$HOME/go"
+export PATH="/usr/lib/distcc/bin:$PATH:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.scripts:$HOME/bin"
 export BROWSER="firefox"
 export READER="zathura"
 export MAKEFLAGS="-j$(nproc)"
