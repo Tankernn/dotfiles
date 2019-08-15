@@ -5,5 +5,5 @@ alias v="vim"
 alias m="mutt"
 alias h="htop"
 
-alias xu="xi -Suy"
+alias xu="xi -Su"
 alias xr="sudo xbps-remove -R"
