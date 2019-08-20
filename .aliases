@@ -2,6 +2,7 @@ alias ccat="highlight --out-format=ansi"
 alias ytdl="youtube-dl"
 alias r="ranger"
 alias v="vim"
+alias nv="nvim"
 alias m="mutt"
 alias h="htop"
 
