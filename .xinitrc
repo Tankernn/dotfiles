@@ -23,4 +23,11 @@ export QT_IM_MODULE='uim'
 uim-xim &
 export XMODIFIERS='@im=uim'
 
+wal -R
+setxkbmap -layout se
+
+compton &
+sxhkd &
+~/.scripts/dwm_status.sh &
+
 exec dwm
