@@ -118,6 +118,7 @@ call plug#end()
 " ########## Plugin Settings ########## {{{
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 call neomake#configure#automake('nrwi', 500)
+let g:completor_racer_binary = '~/.cargo/bin/racer'
 
 " Use TAB to complete when typing words, else inserts TABs as usual.  Uses
 " dictionary, source files, and completor to find matching words to complete.

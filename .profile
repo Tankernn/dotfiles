@@ -5,6 +5,7 @@
 #umask 022
 
 export GOPATH="$HOME/go"
+export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PATH="/usr/lib/distcc/bin:$PATH:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.scripts:$HOME/bin"
 export BROWSER="firefox"
 export READER="zathura"
