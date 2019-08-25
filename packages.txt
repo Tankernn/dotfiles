@@ -18,6 +18,7 @@ pass
 passmenu
 pinentry-dmenu
 playerctl
+python3-neovim
 pywal
 ranger
 rofi
@@ -25,7 +26,7 @@ surf
 sxhkd
 tabbed
 uim-anthy
-vim-huge
+neovim
 xorg
 zsh
 zsh-autosuggestions
