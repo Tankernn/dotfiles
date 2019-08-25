@@ -115,7 +115,6 @@ call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
 call neomake#configure#automake('nrwi', 500)
 let g:completor_racer_binary = '~/.cargo/bin/racer'
 
