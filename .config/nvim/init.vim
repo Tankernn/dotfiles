@@ -111,10 +111,15 @@ Plug 'neomake/neomake'
 Plug 'fisadev/dragvisuals.vim'
 Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
+augroup rust
+    autocmd!
+    autocmd FileType rust au BufWrite * :Autoformat
+augroup END
 call neomake#configure#automake('nrwi', 500)
 let g:completor_racer_binary = '~/.cargo/bin/racer'
 
