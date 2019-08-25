@@ -27,13 +27,13 @@ let maplocalleader = "\\"
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 augroup trailingwhitespace
-autocmd!
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+    autocmd!
+    autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 augroup END
 
 " Tabs
 set list
-set listchars=tab:\|\ 
+set listchars=tab:\|\ ,
 " }}}
 
 " ########## Keybinds ########## {{{
