@@ -100,7 +100,6 @@ autocmd BufNewFile,BufRead *.ms,*.me,*.mom,*.man set filetype=groff
 
 " ########## Plugins ########## {{{
 call plug#begin()
-Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
