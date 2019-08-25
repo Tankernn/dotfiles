@@ -119,6 +119,7 @@ call plug#end()
 augroup rust
     autocmd!
     autocmd FileType rust au BufWrite * :Autoformat
+    autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
 augroup END
 call neomake#configure#automake('nrwi', 500)
 let g:completor_racer_binary = '~/.cargo/bin/racer'
