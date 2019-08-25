@@ -43,11 +43,11 @@ done
 git_make_install()
 {
     (
-    mkdir -p "~/git/$1";
-    cd "~/git/$1";
-    git clone "$2" .;
-    make;
-    sudo make install;
+    mkdir -p "$HOME/git/$1"
+    cd "$HOME/git/$1"
+    git clone "$2" .
+    make
+    sudo make install
     )
 }
 
