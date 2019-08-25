@@ -63,6 +63,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 fancy_print "Installing suckless forks"
 git_make_install "st" "https://gogs.tankernn.eu/Tankernn/st.git"
 git_make_install "dwm" "https://gogs.tankernn.eu/Tankernn/dwm.git"
+git_make_install "mpv-prescalers" "https://github.com/bjin/mpv-prescalers.git"
 
 printf "\033[31m"
 figlet "Installation complete!"
