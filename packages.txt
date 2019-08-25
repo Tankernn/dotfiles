@@ -21,7 +21,6 @@ playerctl
 python3-neovim
 pywal
 ranger
-rofi
 surf
 sxhkd
 tabbed
