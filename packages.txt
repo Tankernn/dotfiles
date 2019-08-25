@@ -21,6 +21,7 @@ playerctl
 python3-neovim
 pywal
 ranger
+shellcheck
 surf
 sxhkd
 tabbed
