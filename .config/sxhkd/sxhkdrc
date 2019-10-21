@@ -16,7 +16,7 @@ alt + shift + s
     spotify
 
 alt + shift + f
-    firefox
+    $BROWSER
 
 # Media controls
 XF86AudioRaiseVolume
