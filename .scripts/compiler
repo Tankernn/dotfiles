@@ -1,2 +1,2 @@
 #!/bin/sh
-refer -PS -e -p ~/git/university-documents/bibliography "$1" | groff -ms -k -t -U -T pdf > "${1%.*}.pdf"
+refer -PS -e -p ~/git/university-documents/bibliography "$1" | groff -ms -e -k -t -U -T pdf > "${1%.*}.pdf"
