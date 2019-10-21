@@ -3,6 +3,7 @@
 CHOICE=$(dmenu -i -b << EOF
 Lock
 Sleep
+Hibernate
 Exit
 Shutdown
 Reboot
@@ -14,16 +15,19 @@ case $CHOICE in
         ~/.scripts/lock.sh
         ;;
     "Sleep")
-        ~/.scripts/lock.sh && echo mem | sudo /usr/bin/tee /sys/power/state
+        ~/.scripts/lock.sh && sudo zzz
+        ;;
+    "Hibernate")
+        ~/.scripts/lock.sh && sudo ZZZ
         ;;
     "Exit")
-        i3-msg exit
+        pkill Xorg
         ;;
     "Shutdown")
-        sudo shutdown -h now
+        sudo poweroff
         ;;
     "Reboot")
-        reboot
+        sudo reboot
         ;;
     *)
         ;;
