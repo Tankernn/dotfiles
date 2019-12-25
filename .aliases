@@ -9,3 +9,5 @@ alias h="htop"
 
 alias xu="xi -Su"
 alias xr="sudo xbps-remove -R"
+
+alias e="sudo emerge -a"
