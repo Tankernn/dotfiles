@@ -20,11 +20,11 @@ alt + shift + f
 
 # Media controls
 XF86AudioRaiseVolume
-    amixer sset Master 4%+
+    pulseaudio-ctl up 4
 XF86AudioLowerVolume
-    amixer sset Master 4%-
+    pulseaudio-ctl down 4
 XF86AudioMute
-    amixer sset Master toggle
+    pulseaudio-ctl mute
 
 XF86AudioPlay
     playerctl play-pause || mpc toggle
