@@ -33,9 +33,7 @@ source ~/.aliases
 bindkey -v
 
 # Fuzzy Finder
-FZF_PATH=/usr/share/doc/fzf/
-source $FZF_PATH/completion.zsh
-source $FZF_PATH/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 fzf-history-widget-accept() {
   fzf-history-widget
