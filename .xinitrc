@@ -30,4 +30,4 @@ compton &
 sxhkd &
 ~/.scripts/dwm_status.sh &
 
-exec dwm
+exec ck-launch-session dwm
