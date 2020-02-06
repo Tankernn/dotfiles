@@ -28,6 +28,4 @@ tabbed
 neovim
 xorg
 zsh
-zsh-autosuggestions
-zsh-syntax-highlighting
 figlet
