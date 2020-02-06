@@ -23,7 +23,7 @@ export QT_IM_MODULE='ibus'
 export XMODIFIERS='@im=ibus'
 ibus-daemon &
 
-wal -R
+python -m pywal -R
 setxkbmap -layout se
 
 compton &
