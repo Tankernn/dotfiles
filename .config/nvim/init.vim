@@ -107,8 +107,8 @@ Plug 'mkitt/tabline.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'raimondi/delimitmate'
-Plug 'neomake/neomake'
 Plug 'fisadev/dragvisuals.vim'
+Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
@@ -116,13 +116,20 @@ call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
+let g:ale_linters = {'rust': ['rls', 'rustc']}
+
+nmap <leader>an <Plug>(ale_next)
+nmap <leader>ap <Plug>(ale_previous)
+
+let g:completor_filetype_map = {}
+" Enable lsp for rust by using rls
+let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls-1.37.0'}
+
 augroup rust
     autocmd!
     autocmd FileType rust au BufWrite * :Autoformat
     autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
 augroup END
-call neomake#configure#automake('nrwi', 500)
-let g:completor_racer_binary = '~/.cargo/bin/racer'
 
 " Use TAB to complete when typing words, else inserts TABs as usual.  Uses
 " dictionary, source files, and completor to find matching words to complete.
