@@ -25,7 +25,6 @@ shellcheck
 surf
 sxhkd
 tabbed
-uim-anthy
 neovim
 xorg
 zsh
