@@ -112,6 +112,7 @@ Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
+Plug 'preservim/nerdtree'
 call plug#end()
 " }}}
 
