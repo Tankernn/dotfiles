@@ -11,6 +11,9 @@ Print
 alt + shift + e
     ~/.scripts/exit_menu.sh
 
+alt + shift + x
+    ~/.scripts/img-chon.sh query-dmenu
+
 # Launch programs
 alt + shift + s
     spotify
