@@ -53,6 +53,8 @@ nnoremap <leader>u :!ctags -R .<CR>
 
 nnoremap <esc> :set nohlsearch<CR>
 
+tnoremap <Esc> <C-\><C-n>
+
 " Local (scope) replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
@@ -110,6 +112,7 @@ Plug 'raimondi/delimitmate'
 Plug 'fisadev/dragvisuals.vim'
 Plug 'dense-analysis/ale'
 Plug 'maralla/completor.vim'
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
@@ -130,6 +133,11 @@ augroup rust
     autocmd!
     autocmd FileType rust au BufWrite * :Autoformat
     autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
+augroup END
+
+augroup java
+    autocmd!
+    autocmd FileType java setlocal omnifunc=javacomplete#Complete
 augroup END
 
 " Use TAB to complete when typing words, else inserts TABs as usual.  Uses
@@ -160,3 +168,4 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Use tab to trigger auto completion.
 inoremap <expr> <Tab> Tab_Or_Complete()
 " }}}
+
