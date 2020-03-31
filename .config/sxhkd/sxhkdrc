@@ -29,18 +29,18 @@ alt + p
 
 # Media controls
 XF86AudioRaiseVolume
-    pulseaudio-ctl up 4
+    pulseaudio-ctl up 4; pkill --signal=USR1 dwm_status.sh
 XF86AudioLowerVolume
-    pulseaudio-ctl down 4
+    pulseaudio-ctl down 4; pkill --signal=USR1 dwm_status.sh
 XF86AudioMute
-    pulseaudio-ctl mute
+    pulseaudio-ctl mute; pkill --signal=USR1 dwm_status.sh
 
 XF86AudioPlay
     playerctl play-pause || mpc toggle
 XF86AudioNext
-    playerctl next || mpc next
+    playerctl next || mpc next; pkill --signal=USR1 dwm_status.sh
 XF86AudioPrev
-    playerctl previous || mpc prev
+    playerctl previous || mpc prev; pkill --signal=USR1 dwm_status.sh
 
 #
 # bspwm hotkeys
