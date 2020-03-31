@@ -94,9 +94,9 @@ case $1 in
     "tags")
         if [ -f "$2" ]; then
             hsh="$(get_hash "$2")"
-            $SQL "SELECT DISTINCT tag FROM image_tag WHERE hash = '$hsh';"
+            $SQL "SELECT DISTINCT tag FROM image_tag WHERE hash = '$hsh' ORDER BY tag;"
         else
-            $SQL "SELECT DISTINCT tag FROM image_tag;"
+            $SQL "SELECT DISTINCT tag FROM image_tag ORDER BY tag;"
         fi
         ;;
     "query-dmenu")
