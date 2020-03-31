@@ -1,15 +1,17 @@
 #!/bin/sh
 
+trap 'echo "Caught SIGUSR1"' USR1
+
 while true; do
-    if playerctl metadata; then
-        MUSIC="$(playerctl metadata artist) - $(playerctl metadata title)"
-    else
-        MUSIC="$(mpc current)"
-    fi
-    MEM="$(free -h | awk '(NR==2){ print $3 }')"
-    VOL="$(pulseaudio-ctl full-status | awk '{print $1 "%" ($2 == "yes" ? " (muted)" : "")}')"
-    TEMP="$(sensors | awk '/Package/{print $4}')"
-    DATE="$(date +"%F %T")"
-    xsetroot -name " $MUSIC | $VOL | $MEM | $TEMP | $DATE"
-    sleep 5
+    STATUS=""
+    for section in "$HOME"/.scripts/status/*.sh; do
+        if [ -z "$STATUS" ]; then
+            STATUS="$($section)"
+        else
+            STATUS="$STATUS | $($section)"
+        fi
+    done
+    xsetroot -name " $STATUS"
+    sleep 5 &
+    wait $!
 done
