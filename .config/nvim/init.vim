@@ -61,6 +61,10 @@ nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 " Global replace
 nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
+" Cscope keybinds
+map g<C-]> :cs find 3 <C-R>=expand("<cword>")<CR><CR>
+map g<C-\> :cs find 0 <C-R>=expand("<cword>")<CR><CR>
+
 nnoremap Y y$
 nnoremap H ^
 nnoremap L $
