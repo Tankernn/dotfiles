@@ -13,7 +13,7 @@ do
         .git) continue ;;
         *.swp) continue ;;
     esac
-    ln -s "$(realpath "$f")" ~/
+    ln -s "$(realpath --no-symlinks "$f")" ~/
 done
 
 prompt()
