@@ -65,6 +65,4 @@ if prompt "Install st and dwm?" ; then
 fi
 prompt "Install mpv prescalers?" && git_make_install "mpv-prescalers" "https://github.com/bjin/mpv-prescalers.git"
 
-printf "\033[31m"
-figlet "Installation complete!"
-printf "\033[0m"
+fancy_print "Installation complete!"
