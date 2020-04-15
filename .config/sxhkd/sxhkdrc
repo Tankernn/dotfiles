@@ -24,6 +24,9 @@ alt + shift + f
 alt + shift + Return
     $TERMINAL
 
+alt + shift + m
+    $TERMINAL neomutt
+
 alt + p
     dmenu_run
 
