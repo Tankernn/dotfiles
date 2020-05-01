@@ -5,10 +5,12 @@ trap 'echo "Caught SIGUSR1"' USR1
 while true; do
     STATUS=""
     for section in "$HOME"/.scripts/status/*.sh; do
+        out="$($section)"
+        [ -z "$out" ] && continue
         if [ -z "$STATUS" ]; then
-            STATUS="$($section)"
+            STATUS="$out"
         else
-            STATUS="$STATUS | $($section)"
+            STATUS="$STATUS | $out"
         fi
     done
     xsetroot -name " $STATUS"
