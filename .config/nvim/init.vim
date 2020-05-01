@@ -124,18 +124,18 @@ call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
-let g:ale_linters = {'rust': ['rls', 'rustc']}
+let g:ale_linters = {'rust': ['cargo', 'rls']}
 
 nmap <leader>an <Plug>(ale_next)
 nmap <leader>ap <Plug>(ale_previous)
 
 let g:completor_filetype_map = {}
 " Enable lsp for rust by using rls
-let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls-1.37.0'}
+let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls'}
 
 augroup rust
     autocmd!
-    autocmd FileType rust au BufWrite * :Autoformat
+    autocmd FileType rust au BufWrite <buffer> :Autoformat
     autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
 augroup END
 
