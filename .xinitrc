@@ -26,7 +26,7 @@ ibus-daemon &
 python -m pywal -R
 setxkbmap -layout se
 
-compton &
+picom &
 sxhkd &
 ~/.scripts/dwm_status.sh &
 
