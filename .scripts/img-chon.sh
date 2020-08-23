@@ -6,6 +6,7 @@ SQLITE="${SQLITE:-sqlite3}"
 
 SQL="$SQLITE $DATABASE"
 SXIV="sxiv -t -"
+THUMBNAIL_OPTS="-resize 100x -quality 75"
 
 join_by () {
     local IFS="$1"
@@ -35,7 +36,8 @@ case $1 in
     "init")
         $SQL "CREATE TABLE image (
                   path TEXT NOT NULL UNIQUE ON CONFLICT REPLACE,
-                  hash TEXT PRIMARY KEY NOT NULL UNIQUE ON CONFLICT ABORT
+                  hash TEXT PRIMARY KEY NOT NULL UNIQUE ON CONFLICT ABORT,
+                  thumbnail TEXT
               );"
         $SQL "CREATE TABLE image_tag (
                   hash TEXT NOT NULL,
@@ -59,7 +61,8 @@ case $1 in
             i=$((i+1))
             hsh="$(get_hash "$f")"
             path="$(realpath --relative-to="$IMG_BASE" "$f")"
-            $SQL "INSERT INTO image (path, hash) VALUES ('$path', '$hsh');"
+            thumbnail="$(convert "$f" ${THUMBNAIL_OPTS[@]} jpg:- | base64 --wrap 0)"
+            $SQL "INSERT INTO image (path, hash, thumbnail) VALUES ('$path', '$hsh', '$thumbnail');"
         done
         endspin
         ;;
@@ -77,7 +80,7 @@ case $1 in
             $SQL "DELETE FROM image_tag WHERE (hash, tag) = ('$hsh','$tag');"
         done
         ;;
-    "query")
+    query|query-thumb)
         tags=()
         anti_tags=()
         for t in "${@:2}"; do
@@ -89,7 +92,21 @@ case $1 in
         done
         tags_str=$(join_by , "${tags[@]}")
         anti_tags_str=$(join_by , "${anti_tags[@]}")
-        $SQL "SELECT path FROM image WHERE ${#tags[@]} = (SELECT COUNT(*) FROM image_tag WHERE image.hash = image_tag.hash AND image_tag.tag IN ($tags_str)) AND (0 = (SELECT COUNT(*) FROM image_tag WHERE image.hash = image_tag.hash AND image_tag.tag IN ($anti_tags_str)));" | awk "{ print \"$IMG_BASE/\" \$0 }"
+        if [ "$1" == "query-thumb" ]; then
+            query="thumbnail"
+        else
+            query="path"
+        fi
+        sql_query="SELECT $query FROM image WHERE ${#tags[@]} = (SELECT COUNT(*) FROM image_tag WHERE image.hash = image_tag.hash AND image_tag.tag IN ($tags_str)) AND (0 = (SELECT COUNT(*) FROM image_tag WHERE image.hash = image_tag.hash AND image_tag.tag IN ($anti_tags_str))) ORDER BY image.path;"
+        if [ "$1" == "query-thumb" ]; then
+            $SQL "$sql_query"
+        else
+            my_base="$(realpath --relative-to=. $IMG_BASE)"
+            $SQL "$sql_query" | awk "{ print \"$my_base/\" \$0 }"
+        fi
+        ;;
+    "thumbnail")
+        $SQL "SELECT thumbnail FROM image WHERE hash = '$2'"
         ;;
     "tags")
         if [ -f "$2" ]; then
