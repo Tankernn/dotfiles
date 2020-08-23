@@ -120,6 +120,7 @@ Plug 'artur-shaik/vim-javacomplete2'
 Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
+Plug 'vim-scripts/taglist.vim'
 call plug#end()
 " }}}
 
