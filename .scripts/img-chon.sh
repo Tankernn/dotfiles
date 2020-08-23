@@ -1,8 +1,8 @@
 #!/bin/bash
 
-IMG_BASE="$HOME"
-DATABASE="$HOME/Pictures/image_tags.sqlite"
-SQLITE="sqlite3"
+IMG_BASE="${IMG_BASE:-$HOME}"
+DATABASE="${DATABASE:-$HOME/Pictures/image_tags.sqlite}"
+SQLITE="${SQLITE:-sqlite3}"
 
 SQL="$SQLITE $DATABASE"
 SXIV="sxiv -t -"
