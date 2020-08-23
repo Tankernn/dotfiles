@@ -12,16 +12,16 @@ EOF
 
 case $CHOICE in
     "Lock")
-        ~/.scripts/lock.sh && xset dpms force standby
+        ~/.scripts/lock.sh
         ;;
     "Sleep")
-        ~/.scripts/lock.sh && sudo s2ram
+        ~/.scripts/lock.sh && sudo zzz
         ;;
     "Hibernate")
-        ~/.scripts/lock.sh && {sudo ZZZ || sudo pm-hibernate }
+        ~/.scripts/lock.sh && sudo ZZZ
         ;;
     "Exit")
-        pkill X
+        pkill Xorg
         ;;
     "Shutdown")
         sudo poweroff

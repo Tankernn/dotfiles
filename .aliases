@@ -11,7 +11,6 @@ alias xu="xi -Su"
 alias xr="sudo xbps-remove -R"
 
 alias e="sudo emerge -a"
-alias a="sudo zfs load-key tank/media; sudo zfs mount -a; ranger /tank/media/anime"
 
 alias y="youtube-dl"
 alias ym="youtube-dl --format bestaudio --extract-audio --add-metadata"

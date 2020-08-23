@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrandr --output DVI-D-0 --auto --left-of DisplayPort-1
+xrandr --output DVI-I-1 --auto --left-of DP-2
 xrandr --output HDMI-0 --mode 3840x2160 --rate 59.94 --right-of DP-2
 
 xset s off
@@ -30,9 +30,4 @@ picom &
 sxhkd &
 ~/.scripts/dwm_status.sh &
 
-ckb-next -b &
-pgrep seaf-daemon || seaf-cli start
-
-#exec ck-launch-session bspwm -c ~/.bspwmrc
 exec ck-launch-session dwm
-
