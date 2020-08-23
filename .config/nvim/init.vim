@@ -118,11 +118,13 @@ Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/taglist.vim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 " }}}
 
 " ########## Plugin Settings ########## {{{
 let g:ale_linters = {'rust': ['cargo', 'rls']}
+let g:deoplete#enable_at_startup = 1
 
 nmap <leader>an <Plug>(ale_next)
 nmap <leader>ap <Plug>(ale_previous)
