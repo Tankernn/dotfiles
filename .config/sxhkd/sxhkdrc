@@ -45,6 +45,11 @@ XF86AudioNext
 XF86AudioPrev
     playerctl previous || mpc prev; pkill --signal=USR1 dwm_status.sh
 
+alt + z
+    mpc toggle; pkill --signal=USR1 dwm_status.sh
+alt + x
+    mpc next; pkill --signal=USR1 dwm_status.sh
+
 #
 # bspwm hotkeys
 #
