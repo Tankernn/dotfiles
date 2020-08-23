@@ -131,6 +131,7 @@ case $1 in
     "stats")
         echo "Number of images: $($SQL "SELECT COUNT(*) FROM image;")"
         echo "Number of distinct tags: $($SQL "SELECT COUNT(DISTINCT tag) FROM image_tag;")"
+        echo "Database size: $(du -h "$DATABASE" | awk '{ print $1 }')"
         ;;
     "")
         name="$(basename "$0")"
