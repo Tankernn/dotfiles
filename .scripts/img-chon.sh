@@ -133,7 +133,7 @@ case $1 in
         echo "Number of distinct tags: $($SQL "SELECT COUNT(DISTINCT tag) FROM image_tag;")"
         echo "Database size: $(du -h "$DATABASE" | awk '{ print $1 }')"
         ;;
-    "")
+    **)
         name="$(basename "$0")"
         echo -e "Usage:"
         echo -e "  $name init                Create a new database."
