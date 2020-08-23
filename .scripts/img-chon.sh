@@ -5,7 +5,7 @@ DATABASE="${DATABASE:-$HOME/Pictures/image_tags.sqlite}"
 SQLITE="${SQLITE:-sqlite3}"
 
 SQL="$SQLITE $DATABASE"
-SXIV="sxiv -t -"
+SXIV="sxiv -at -"
 THUMBNAIL_OPTS="-resize 100x -quality 75"
 
 join_by () {
