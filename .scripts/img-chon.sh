@@ -34,12 +34,12 @@ get_hash() {
 case $1 in
     "init")
         $SQL "CREATE TABLE image (
-                  path STRING NOT NULL UNIQUE ON CONFLICT REPLACE,
-                  hash STRING PRIMARY KEY NOT NULL UNIQUE ON CONFLICT ABORT
+                  path TEXT NOT NULL UNIQUE ON CONFLICT REPLACE,
+                  hash TEXT PRIMARY KEY NOT NULL UNIQUE ON CONFLICT ABORT
               );"
         $SQL "CREATE TABLE image_tag (
-                  hash STRING NOT NULL,
-                  tag STRING NOT NULL,
+                  hash TEXT NOT NULL,
+                  tag TEXT NOT NULL,
                   UNIQUE (hash, tag) ON CONFLICT ABORT
               );"
         $SQL "CREATE TRIGGER image_exists
