@@ -8,7 +8,7 @@ source /etc/profile
 export GOPATH="$HOME/go"
 export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 export PATH="/usr/lib/distcc/bin:$PATH:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.scripts:$HOME/bin"
-export BROWSER="icecat"
+export BROWSER="firefox"
 export READER="zathura"
 export MAKEFLAGS="-j$(nproc)"
 export EDITOR="vim"
