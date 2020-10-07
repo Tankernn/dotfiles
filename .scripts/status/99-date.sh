@@ -1,2 +1,2 @@
 #!/bin/sh
-date +"%F %T"
+date +"%A %d %B | %H:%M"
