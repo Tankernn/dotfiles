@@ -16,7 +16,10 @@ alt + shift + x
 
 # Launch programs
 alt + shift + s
-    spotify
+    setxkbmap se
+
+alt + shift + u
+    setxkbmap us
 
 alt + shift + f
     $BROWSER
