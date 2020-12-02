@@ -12,7 +12,7 @@ EOF
 
 case $CHOICE in
     "Lock")
-        ~/.scripts/lock.sh
+        ~/.scripts/lock.sh; xset dpms force standby
         ;;
     "Sleep")
         ~/.scripts/lock.sh && sudo zzz
