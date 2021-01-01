@@ -13,7 +13,7 @@ while true; do
             STATUS="$STATUS | $out"
         fi
     done
-    xsetroot -name " $STATUS"
+    xsetroot -name " $STATUS "
     sleep 5 &
     wait $!
 done
