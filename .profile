@@ -13,6 +13,7 @@ export READER="zathura"
 export MAKEFLAGS="-j$(nproc)"
 export EDITOR="vim"
 export LESSOPEN="|lesspipe.sh %s"
+export GTK_THEME=Adwaita:dark
 
 # less colors
 export LESS=-R
