@@ -12,6 +12,7 @@ set hlsearch
 set smarttab
 set ignorecase
 set smartcase
+set mouse=
 
 set number relativenumber
 set so=7
