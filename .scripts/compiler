@@ -1,2 +1,6 @@
 #!/bin/sh
-refer -PS -e -p ~/git/university-documents/bibliography "$1" | pic | groff -ms -mpic -e -k -t -U -T ps > "${1%.*}.ps"
+case "${1##*.}" in
+    ms) refer -PS -e -p ~/git/university-documents/bibliography "$1" | pic | groff -ms -mpic -e -k -t -U -T ps > "${1%.*}.ps"
+        ;;
+    tex) pdflatex "$1"
+esac
