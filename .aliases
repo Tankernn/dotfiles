@@ -14,3 +14,7 @@ alias e="sudo emerge -a"
 
 alias y="youtube-dl"
 alias ym="youtube-dl --format bestaudio --extract-audio --add-metadata"
+
+alias ls="ls --color"
+alias l="ls -laF --color"
+alias ll="ls -lF --color"
