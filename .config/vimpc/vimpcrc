@@ -1,0 +1,3 @@
+set singlequit
+set ignorecase
+set songformat {%a - %t}|{%f} (%b)$E$R $H[$H%l$H]$H
