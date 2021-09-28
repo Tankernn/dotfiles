@@ -9,7 +9,7 @@ xset -dpms
 
 [ -f ~/.Xresources ] && xrdb -merge -I"$HOME" ~/.Xresources
 
-start-pulseaudio-x11 &
+cadence-session-start --start
 
 # test for an existing bus daemon, just to be safe
 if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
