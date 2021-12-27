@@ -48,6 +48,7 @@ nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>gr :Git rebase -i
 
 noremap <leader>c :w! \| !compiler <c-r>%<CR><CR>
+noremap <leader>o :!open <c-r>%<CR><CR>
 noremap <leader>p :!opout <c-r>%<CR><CR>
 
 nnoremap <leader>u :!ctags -R .<CR>
