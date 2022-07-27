@@ -30,5 +30,4 @@ picom &
 sxhkd &
 dunst &
 ~/.scripts/dwm_status.sh &
-
-exec ck-launch-session dwm
+exec dwm
