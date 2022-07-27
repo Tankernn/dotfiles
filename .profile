@@ -8,6 +8,7 @@ source /etc/profile
 export GOPATH="$HOME/go"
 export PATH="/usr/lib/distcc/bin:$PATH:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.scripts:$HOME/bin"
 export BROWSER="firefox"
+export TERMINAL="st"
 export READER="zathura"
 export MAKEFLAGS="-j$(nproc)"
 export EDITOR="nvim"
