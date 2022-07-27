@@ -31,4 +31,6 @@ picom &
 sxhkd &
 dunst &
 ~/.scripts/dwm_status.sh &
+~/.scripts/mpc_status.sh &
+
 exec dwm
