@@ -10,7 +10,7 @@ export PATH="/usr/lib/distcc/bin:$PATH:$HOME/.cargo/bin:$GOPATH/bin:$HOME/.scrip
 export BROWSER="firefox"
 export READER="zathura"
 export MAKEFLAGS="-j$(nproc)"
-export EDITOR="vim"
+export EDITOR="nvim"
 export LESSOPEN="|lesspipe.sh %s"
 export GTK_THEME=Adwaita:dark
 
