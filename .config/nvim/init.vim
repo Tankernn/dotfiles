@@ -120,6 +120,7 @@ Plug 'junegunn/fzf'
 Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/taglist.vim'
+Plug 'ashinkarov/nvim-agda'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
 " }}}
