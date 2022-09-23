@@ -91,7 +91,6 @@ let g:DVB_TrimWS = 1
 " }}}
 
 " ########## Abbreviations ########## {{{
-iabbrev ret return
 iabbrev @@ frans@tankernn.eu
 iabbrev ssig -- <cr>Frans Bergman<cr>frans@tankernn.eu
 " }}}
