@@ -101,6 +101,30 @@ autocmd FileType vim :set foldmethod=marker
 autocmd BufNewFile,BufRead *.ms,*.me,*.mom,*.man set filetype=groff
 " }}}
 
+" ########## Plugin Settings ########## {{{
+let g:ale_linters = {'rust': ['analyzer']}
+set omnifunc=ale#completion#OmniFunc
+let g:ale_completion_enabled = 1
+let g:ale_completion_autoimport = 1
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+    \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \ 'rust': ['rustfmt'],
+\}
+
+nmap <leader>an <Plug>(ale_next)
+nmap <leader>ap <Plug>(ale_previous)
+
+augroup rust
+    autocmd!
+    autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
+augroup END
+
+" Use `tab` key to select completions.  Default is arrow keys.
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" }}}
+
 " ########## Plugins ########## {{{
 call plug#begin()
 Plug 'tpope/vim-fugitive'
@@ -112,58 +136,10 @@ Plug 'tpope/vim-repeat'
 Plug 'raimondi/delimitmate'
 Plug 'fisadev/dragvisuals.vim'
 Plug 'dense-analysis/ale'
-Plug 'maralla/completor.vim'
 Plug 'junegunn/fzf'
-Plug 'Chiel92/vim-autoformat'
 Plug 'preservim/nerdtree'
 Plug 'vim-scripts/taglist.vim'
 Plug 'ashinkarov/nvim-agda'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 call plug#end()
-" }}}
-
-" ########## Plugin Settings ########## {{{
-let g:ale_linters = {'rust': ['cargo', 'rls']}
-let g:deoplete#enable_at_startup = 1
-
-nmap <leader>an <Plug>(ale_next)
-nmap <leader>ap <Plug>(ale_previous)
-
-let g:completor_filetype_map = {}
-" Enable lsp for rust by using rls
-let g:completor_filetype_map.rust = {'ft': 'lsp', 'cmd': 'rls'}
-
-augroup rust
-    autocmd!
-    autocmd FileType rust au BufWrite <buffer> :Autoformat
-    autocmd FileType rust let b:delimitMate_smart_quotes='\%(\w\|[^[:punct:][:space:]]\|\%(\\\\\)*\\\)\%#\|\%#\%(\w\|[^[:space:][:punct:]]\)\|\<\%#\|\&\%#'
-augroup END
-
-" Use TAB to complete when typing words, else inserts TABs as usual.  Uses
-" dictionary, source files, and completor to find matching words to complete.
-
-" Note: usual completion is on <C-n> but more trouble to press all the time.
-" Never type the same word twice and maybe learn a new spellings!
-" Use the Linux dictionary when spelling is in doubt.
-function! Tab_Or_Complete() abort
-    " If completor is already open the `tab` cycles through suggested completions.
-    if pumvisible()
-        return "\<C-N>"
-        " If completor is not open and we are in the middle of typing a word then
-        " `tab` opens completor menu.
-    elseif col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^[[:keyword:][:ident:]]'
-        return "\<C-R>=completor#do('complete')\<CR>"
-    else
-        " If we aren't typing a word and we press `tab` simply do the normal `tab`
-        " action.
-        return "\<Tab>"
-    endif
-endfunction
-
-" Use `tab` key to select completions.  Default is arrow keys.
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" Use tab to trigger auto completion.
-inoremap <expr> <Tab> Tab_Or_Complete()
 " }}}
