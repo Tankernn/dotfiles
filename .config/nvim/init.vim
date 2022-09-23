@@ -53,8 +53,6 @@ noremap <leader>p :!opout <c-r>%<CR><CR>
 
 nnoremap <leader>u :!ctags -R .<CR>
 
-nnoremap <esc> :set nohlsearch<CR>
-
 " Local (scope) replace
 nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
 
