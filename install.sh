@@ -54,6 +54,5 @@ if prompt "Install st and dwm?" ; then
     git_make_install "st" "https://gogs.tankernn.eu/Tankernn/st.git"
     git_make_install "dwm" "https://gogs.tankernn.eu/Tankernn/dwm.git"
 fi
-prompt "Install mpv prescalers?" && git_make_install "mpv-prescalers" "https://github.com/bjin/mpv-prescalers.git"
 
 fancy_print "Installation complete!"
